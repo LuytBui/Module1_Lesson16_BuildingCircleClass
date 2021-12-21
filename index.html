@@ -1,10 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    class Circle {
+        constructor(circleRadius){
+            this.circleRadius = circleRadius;
+        }
+        set radius(circleRadius){
+            this.circleRadius = circleRadius;
+        }
+        get radius() {
+            return this.circleRadius;
+        }
+        get diameter(){
+            return this.radius * 2;
+        }
+        get area(){
+            return Math.PI * this.circleRadius * this.circleRadius;
+        }
+        get perimeter(){
+            return Math.PI * this.diameter;
+        }
+    }
+
+    let a = new Circle(3);
+    console.log(a.radius);
+    console.log(a.area);
+    console.log(a.perimeter);
+
+    a.radius = 1;
+    console.log(a.radius);
+    console.log(a.area);
+    console.log(a.perimeter);
+
+</script>
 </body>
 </html>
+
+
